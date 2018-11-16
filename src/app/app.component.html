@@ -4,9 +4,9 @@
 <div class="feed">
   <div class="form feed-box">
     <textarea name="name" rows="5" cols="80" placeholder="What's on your mind?" #post ngModel></textarea>
-    <img class="camera" src="https://cdn.pixabay.com/photo/2012/04/11/17/31/camera-29061_960_720.png" alt="camera">
+    <img class="camera" src="assets/images/camera.png" alt="camera">
     <input class="url-input" type="text" placeholder="Image url" #url ngModel>
-    <img class="link-img" src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Chain_link_icon.png" alt="link">
+    <img class="link-img" src="assets/images/chain.png" alt="link">
     <input class="url-input link" type="text" placeholder="Link url" #link ngModel>
 
     <div (click)="addPost(post.value, url.value, link.value)" (click)="post.value = ''" (click)="url.value = ''" (click)="link.value = ''" class="submit">Submit</div>
@@ -22,10 +22,10 @@
 
     <div class="heart-div">
       <div class="likes">{{post.likes}}</div>
-      <img class="heart" src="https://image.flaticon.com/icons/png/512/275/275882.png" alt="Heart" (click)="likePost(post)">
-        <img class="comment" src="http://www.clker.com/cliparts/e/D/y/m/U/t/speech-bubble-hi.png" alt="Comment" (click)="post.boolean = !post.boolean">
+      <img class="heart" src="assets/images/heart.png" alt="Heart" (click)="likePost(post)">
+        <img class="comment" src="assets/images/comment.png" alt="Comment" (click)="post.boolean = !post.boolean">
        <span class="comments">{{post.comments.length}}</span> <span><input class="comment-input" type="text" placeholder="add comment..." #comment ngModel></span>
-      <img class="check" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/ok-1976099_960_720.png" alt="check" (click)="addComment(post, comment.value)" (click)="comment.value = ''">
+      <img class="check" src="assets/images/check.png" alt="check" (click)="addComment(post, comment.value)" (click)="comment.value = ''">
     </div>
     <div class="" *ngIf="post.boolean">
         <div class="comment-div" *ngFor="let comment of post.comments">- {{comment}}</div>
