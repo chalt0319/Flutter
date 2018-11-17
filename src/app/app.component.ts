@@ -10,8 +10,7 @@ export class AppComponent {
 
   addPost(value, image, link){
     let hash = {text: value, likes: 0, image: image, link: link, shortLink: link.slice(0, 50) + "...", comments: [], boolean: false}
-    this.postArray.unshift(hash)
-    console.log("in addPost function:", this.postArray)
+    this.postArray.push(hash)
   }
 
   likePost(post){
@@ -22,7 +21,6 @@ export class AppComponent {
       }
 
     })
-    console.log("in likePost function:", this.postArray)
   }
 
   addComment(post, comment){
