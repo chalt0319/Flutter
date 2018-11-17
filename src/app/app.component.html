@@ -3,7 +3,7 @@
 </div>
 <div class="feed">
   <div class="form feed-box">
-    <textarea name="name" rows="5" cols="80" placeholder="What's on your mind??" #post ngModel></textarea>
+    <textarea name="name" rows="5" cols="80" placeholder="What's on your mind?" #post ngModel></textarea>
     <img class="camera" src="assets/images/camera.png" alt="camera">
     <input class="url-input" type="text" placeholder="Image url" #url ngModel>
     <img class="link-img" src="assets/images/chain.png" alt="link">
@@ -12,8 +12,6 @@
     <div (click)="addPost(post.value, url.value, link.value)" (click)="post.value = ''" (click)="url.value = ''" (click)="link.value = ''" class="submit">Submit</div>
   </div>
   <div class="feed-box" *ngFor="let post of postArray">
-    <span>Testing testing 123</span>
-    {{post.index}} -
     {{post.text}}
       <div *ngIf="post.image">
         <img class="post-image" src="{{post.image}}" alt="image">
