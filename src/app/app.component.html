@@ -11,7 +11,7 @@
 
     <div (click)="addPost(post.value, url.value, link.value)" (click)="post.value = ''" (click)="url.value = ''" (click)="link.value = ''" class="submit">Submit</div>
   </div>
-  <div class="feed-box" *ngFor="let post of postArray.reverse()">
+  <div class="feed-box" *ngFor="let post of postArray">
     {{post.text}}
       <div *ngIf="post.image">
         <img class="post-image" src="{{post.image}}" alt="image">

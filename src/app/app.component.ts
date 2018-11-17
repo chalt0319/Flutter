@@ -10,7 +10,7 @@ export class AppComponent {
 
   addPost(value, image, link){
     let hash = {text: value, likes: 0, image: image, link: link, shortLink: link.slice(0, 50) + "...", comments: [], boolean: false}
-    this.postArray.push(hash)
+    this.postArray.unshift(hash)
   }
 
   likePost(post){
